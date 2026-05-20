@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JolyEnermine Consulting</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Cinzel:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+
+            --primary-dark: #091524;
+            --primary-navy: #10233f;
+            --secondary-navy: #173154;
+
+            --gold: #caa84d;
+            --gold-light: #e0c16e;
+            --gold-dark: #9d7d25;
+
+            --white: #ffffff;
+            --text-muted: #b7c0cb;
+
+            --bg-light: #f5f7fa;
+            --card-bg: #ffffff;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family: 'Cairo', sans-serif;
+            background: var(--bg-light);
+            color: var(--primary-dark);
+            overflow-x: hidden;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* =========================
+            NAVBAR
+        ========================== */
+
+        .navbar {
+
+            position: sticky;
+            top: 0;
+            z-index: 999;
+
+            background: rgba(9, 21, 36, 0.95);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(202, 168, 77, 0.2);
+
+        }
+
+        .navbar-container {
+
+            max-width: 1400px;
+            margin: auto;
+
+            padding: 0 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        /* Logo */
+
+        .logo-section {
+
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            padding: 15px 0;
+
+        }
+
+        .logo-icon {
+
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50%;
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+        }
+
+        .logo-icon img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+        }
+
+        .logo-text h1 {
+
+            color: var(--gold);
+
+            font-size: 20px;
+            font-weight: 800;
+
+            line-height: 1.2;
+
+        }
+
+        .logo-text p {
+
+            color: var(--text-muted);
+
+            font-size: 12px;
+
+        }
+
+        /* Nav */
+
+        .nav-links {
+
+            display: flex;
+            align-items: center;
+
+        }
+
+        .nav-links li {
+
+            position: relative;
+
+        }
+
+        .nav-links a {
+
+            color: var(--text-muted);
+
+            padding: 28px 18px;
+
+            display: block;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            transition: 0.3s;
+
+            border-bottom: 3px solid transparent;
+
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+
+            color: var(--gold);
+
+            border-color: var(--gold);
+
+            background: rgba(202, 168, 77, 0.06);
+
+        }
+
+        /* Language */
+
+        .language-selector {
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: var(--text-muted);
+
+            border: 1px solid rgba(202, 168, 77, 0.3);
+
+            padding: 10px 18px;
+
+            border-radius: 40px;
+
+            transition: 0.3s;
+
+            font-size: 14px;
+
+        }
+
+        .language-selector:hover {
+
+            border-color: var(--gold);
+
+            color: var(--gold);
+
+        }
+
+        /* =========================
+            HERO
+        ========================== */
+
+        .hero {
+
+            background:
+                /*linear-gradient(rgba(9, 21, 36, 0.88),
+                    rgba(9, 21, 36, 0.88)),*/
+				linear-gradient(rgba(0,0,0,0.0), rgba(0,0,0,0.0)),
+                url('bg6.png') center/cover no-repeat;
+
+            min-height: 90vh;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+        }
+
+        .hero-container {
+
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding: 80px 35px;
+
+            width: 100%;
+
+        }
+
+        .hero-content {
+
+            max-width: 750px;
+
+        }
+
+        .hero-badge {
+
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            background: rgba(202, 168, 77, 0.12);
+
+            border: 1px solid var(--gold);
+
+            color: var(--gold);
+
+            padding: 10px 22px;
+
+            border-radius: 50px;
+
+            margin-bottom: 28px;
+
+            font-size: 14px;
+
+        }
+
+        .hero-title {
+
+            font-size: 55px;
+            line-height: 1.4;
+
+            color: var(--white);
+
+            font-weight: 800;
+
+            margin-bottom: 25px;
+
+        }
+
+        .gold-text {
+
+            color: var(--gold);
+
+        }
+
+        .hero-description {
+
+            color: var(--text-muted);
+
+            font-size: 18px;
+
+            line-height: 2;
+
+            margin-bottom: 40px;
+
+            max-width: 650px;
+
+        }
+
+        /* Buttons */
+
+        .hero-buttons {
+
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+        }
+
+        .btn {
+
+            position: relative;
+
+            overflow: hidden;
+
+            padding: 15px 34px;
+
+            border-radius: 10px;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            transition: 0.3s;
+
+        }
+
+        .btn::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+            left: -100%;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(255, 255, 255, 0.15);
+
+            transition: 0.5s;
+
+        }
+
+        .btn:hover::before {
+
+            left: 100%;
+
+        }
+
+        .btn-primary {
+
+            background: var(--gold);
+
+            color: var(--primary-dark);
+
+        }
+
+        .btn-primary:hover {
+
+            transform: translateY(-4px);
+
+            box-shadow: 0 15px 35px rgba(202, 168, 77, 0.3);
+
+        }
+
+        .btn-outline {
+
+            border: 2px solid rgba(255, 255, 255, 0.25);
+
+            color: white;
+
+        }
+
+        .btn-outline:hover {
+
+            border-color: var(--gold);
+
+            color: var(--gold);
+
+        }
+
+        /* =========================
+            FEATURES
+        ========================== */
+
+        .features {
+
+            background: white;
+
+            padding: 50px 0;
+
+        }
+
+        .features-container {
+
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding: 0 35px;
+
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 25px;
+
+        }
+
+        .feature-box {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            display: flex;
+            align-items: center;
+            gap: 18px;
+
+            transition: 0.35s;
+
+            border: 1px solid #eee;
+
+        }
+
+        .feature-box:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+
+        }
+
+        .feature-icon {
+
+            width: 65px;
+            height: 65px;
+
+            border-radius: 16px;
+
+            background: rgba(202, 168, 77, 0.12);
+
+            color: var(--gold);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 24px;
+
+            flex-shrink: 0;
+
+            transition: 0.3s;
+
+        }
+
+        .feature-box:hover .feature-icon {
+
+            transform: scale(1.1);
+
+            background: var(--gold);
+
+            color: var(--primary-dark);
+
+        }
+
+        .feature-text h3 {
+
+            font-size: 17px;
+
+            margin-bottom: 6px;
+
+        }
+
+        .feature-text p {
+
+            color: #777;
+
+            font-size: 14px;
+
+        }
+
+        /* =========================
+            SERVICES
+        ========================== */
+
+        .services {
+
+            padding: 100px 0;
+
+        }
+
+        .section-header {
+
+            text-align: center;
+
+            margin-bottom: 60px;
+
+        }
+
+        .section-header h2 {
+
+            font-size: 40px;
+
+            margin-bottom: 15px;
+
+            font-weight: 800;
+
+        }
+
+        .section-header p {
+
+            color: #666;
+
+            max-width: 700px;
+
+            margin: auto;
+
+            line-height: 2;
+
+        }
+
+        .services-container {
+
+            max-width: 1400px;
+
+            margin: auto;
+
+            padding: 0 35px;
+
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            gap: 25px;
+
+        }
+
+        .service-card {
+
+            background: white;
+
+            border-radius: 22px;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border: 1px solid #eee;
+
+            transition: 0.4s;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+
+        }
+
+        .service-card::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background: var(--gold);
+
+            transform: scaleX(0);
+
+            transition: 0.4s;
+
+        }
+
+        .service-card:hover::before {
+
+            transform: scaleX(1);
+
+        }
+
+        .service-card:hover {
+
+            transform: translateY(-10px);
+
+            border-color: var(--gold);
+
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .service-icon {
+
+            width: 80px;
+            height: 80px;
+
+            margin: auto auto 25px;
+
+            border-radius: 50%;
+
+            background: rgba(202, 168, 77, 0.12);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 32px;
+
+            color: var(--gold);
+
+            transition: 0.5s;
+
+        }
+
+        .service-card:hover .service-icon {
+
+            background: var(--gold);
+
+            color: var(--primary-dark);
+
+            transform: rotateY(360deg);
+
+        }
+
+        .service-card h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 12px;
+
+        }
+
+        .service-card p {
+
+            color: #777;
+
+            line-height: 1.9;
+
+            font-size: 14px;
+
+            margin-bottom: 22px;
+
+        }
+
+        .service-link {
+
+            color: var(--gold);
+
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+
+        }
+
+        .service-link:hover {
+
+            gap: 16px;
+
+        }
+
+        /* =========================
+            RESPONSIVE
+        ========================== */
+
+        @media(max-width:1200px) {
+
+            .services-container {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+        }
+
+        @media(max-width:992px) {
+
+            .hero-title {
+
+                font-size: 40px;
+
+            }
+
+            .features-container {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .services-container {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .nav-links {
+
+                display: none;
+
+            }
+
+        }
+
+        @media(max-width:768px) {
+
+            .hero {
+
+                min-height: auto;
+
+            }
+
+            .hero-container {
+
+                padding: 70px 20px;
+
+            }
+
+            .hero-title {
+
+                font-size: 32px;
+
+            }
+
+            .hero-description {
+
+                font-size: 16px;
+
+            }
+
+            .hero-buttons {
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+            }
+
+            .btn {
+
+                justify-content: center;
+
+            }
+
+            .features-container,
+            .services-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .section-header h2 {
+
+                font-size: 30px;
+
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =========================
+        NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="navbar-container">
+
+            <!-- Logo -->
+
+            <div class="logo-section">
+
+                <div class="logo-icon">
+                    <img src="icon.png" alt="">
+                </div>
+
+                <div class="logo-text">
+                    <h1>JoLy Enermine</h1>
+                    <p>Consulting</p>
+                </div>
+
+            </div>
+
+            <!-- Menu -->
+
+            <ul class="nav-links">
+
+                <li><a href="#" class="active">الرئيسية</a></li>
+
+                <li><a href="#">الخدمات</a></li>
+
+                <li><a href="index5.html">من نحن</a></li>
+
+                <li><a href="#">المقالات</a></li>
+
+                <li><a href="#">الأسئلة الشائعة</a></li>
+
+                <li><a href="#">اتصل بنا</a></li>
+
+            </ul>
+
+            <!-- Language -->
+
+            <a href="index4.html" class="language-selector">
+
+                <i class="fas fa-globe"></i>
+
+                <span>English</span>
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- =========================
+        HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-container">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <i class="fas fa-star"></i>
+
+                    <span>استشارات متخصصة</span>
+
+                </div>
+
+                <h1 class="hero-title">
+
+                    خدمات استشارية<br>
+
+                    قانونية واقتصادية<br>
+
+                    <span class="gold-text">
+                        متخصصة في قطاع الطاقة والمناجم
+                    </span>
+
+                </h1>
+
+                <p class="hero-description">
+
+                    نقدم حلولاً قانونية واقتصادية متكاملة لدعم مشاريعكم في
+                    مجالات الطاقة والمناجم والاستثمار، وفق أعلى المعايير
+                    المهنية والاستراتيجية.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="index1.html" class="btn btn-primary">
+
+                        <span>طلب استشارة</span>
+
+                        <i class="fas fa-arrow-left"></i>
+
+                    </a>
+
+                    <a href="#" class="btn btn-outline">
+
+                        <i class="fas fa-play-circle"></i>
+
+                        <span>اكتشف خدماتنا</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+        FEATURES
+    ========================== -->
+
+    <section class="features">
+
+        <div class="features-container">
+
+            <!-- Item -->
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+
+                    <i class="fas fa-clock"></i>
+
+                </div>
+
+                <div class="feature-text">
+
+                    <h3>سرعة واحترافية</h3>
+
+                    <p>استجابة سريعة لجميع احتياجاتكم</p>
+
+                </div>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+
+                    <i class="fas fa-users"></i>
+
+                </div>
+
+                <div class="feature-text">
+
+                    <h3>دعم المستثمرين</h3>
+
+                    <p>حماية قانونية واستراتيجية لاستثماراتكم</p>
+
+                </div>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+
+                    <i class="fas fa-lightbulb"></i>
+
+                </div>
+
+                <div class="feature-text">
+
+                    <h3>حلول مخصصة</h3>
+
+                    <p>استراتيجيات تناسب كل مشروع</p>
+
+                </div>
+
+            </div>
+
+            <!-- Item -->
+
+            <div class="feature-box">
+
+                <div class="feature-icon">
+
+                    <i class="fas fa-shield-alt"></i>
+
+                </div>
+
+                <div class="feature-text">
+
+                    <h3>خبرة متخصصة</h3>
+
+                    <p>معرفة عميقة بقوانين الطاقة والمناجم</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+        SERVICES
+    ========================== -->
+
+    <section class="services">
+
+        <div class="section-header">
+
+            <h2>خدماتنا القانونية</h2>
+
+            <p>
+
+                نقدم مجموعة واسعة من الخدمات والاستشارات القانونية والاقتصادية
+                المتخصصة في قطاع الطاقة والمناجم والاستثمار.
+
+            </p>
+
+        </div>
+
+        <div class="services-container">
+
+            <!-- Card -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <i class="fas fa-file-contract"></i>
+
+                </div>
+
+                <h3>صياغة العقود</h3>
+
+                <p>
+
+                    إعداد وصياغة ومراجعة العقود والاتفاقيات القانونية
+                    باحترافية عالية.
+
+                </p>
+
+                <a href="#" class="service-link">
+
+                    <span>اكتشف المزيد</span>
+
+                    <i class="fas fa-arrow-left"></i>
+
+                </a>
+
+            </div>
+
+            <!-- Card -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <i class="fas fa-balance-scale"></i>
+
+                </div>
+
+                <h3>مراجعة العقود</h3>
+
+                <p>
+
+                    مراجعة شاملة للعقود لضمان حماية الحقوق القانونية
+                    وتقليل المخاطر.
+
+                </p>
+
+                <a href="#" class="service-link">
+
+                    <span>اكتشف المزيد</span>
+
+                    <i class="fas fa-arrow-left"></i>
+
+                </a>
+
+            </div>
+
+            <!-- Card -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <i class="fas fa-gavel"></i>
+
+                </div>
+
+                <h3>فض النزاعات</h3>
+
+                <p>
+
+                    حلول قانونية فعالة لتسوية النزاعات والتفاوض
+                    والتحكيم التجاري.
+
+                </p>
+
+                <a href="#" class="service-link">
+
+                    <span>اكتشف المزيد</span>
+
+                    <i class="fas fa-arrow-left"></i>
+
+                </a>
+
+            </div>
+
+            <!-- Card -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <i class="fas fa-chart-bar"></i>
+
+                </div>
+
+                <h3>تحليل المشاريع</h3>
+
+                <p>
+
+                    دراسات اقتصادية وتحليل استراتيجي للمشاريع
+                    والاستثمارات الكبرى.
+
+                </p>
+
+                <a href="#" class="service-link">
+
+                    <span>اكتشف المزيد</span>
+
+                    <i class="fas fa-arrow-left"></i>
+
+                </a>
+
+            </div>
+
+            <!-- Card -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+
+                    <i class="fas fa-landmark"></i>
+
+                </div>
+
+                <h3>استشارات قانونية</h3>
+
+                <p>
+
+                    استشارات قانونية متخصصة للشركات والمؤسسات
+                    العاملة في قطاع الطاقة والمناجم.
+
+                </p>
+
+                <a href="#" class="service-link">
+
+                    <span>اكتشف المزيد</span>
+
+                    <i class="fas fa-arrow-left"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
